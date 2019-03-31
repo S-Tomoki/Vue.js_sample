@@ -1,23 +1,18 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="app" >
+    <!-- ナビゲーション -->
+    <HeaderItem></HeaderItem>
+    <!-- ランキング -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HeaderItem from './components/header/HeaderItem.vue'
+
 export default {
-  name: 'App'
+  components: {
+    HeaderItem
+  }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
